@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1 ,user-scalable=no">
+    <title>清风python</title>
+    <link rel="icon" href="{{ url_for('static',filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
+    <script src="{{ url_for('static',filename='js/jquery.min.js') }}"></script>
+</head>
+<body>
+
+<div class="container container-small">
+    <div class="content">
+        <div class="header">
+            天气查询软件
+        </div>
+        <div class="block-info">
+            <div class="form-group has-success">
+                <div class="input-group">
+                    <div class="input-group-addon">
+                        城市：
+                    </div>
+                    <input id='name' class="form-control"/>
+
+                </div>
+
+            </div>
+            <div class="form-group ">
+                <button class="form-control btn-primary" id="load">查询</button>
+            </div>
+            <p class="result"></p>
+            <script type="text/javascript">
+                $(function () {
+                    $('#load').click(function () {
+                        let city = $('#name').val();
+                        if (city.length > 0) {
+                            $.ajax({
+                                url: '/weather/' + city,
+                                type: 'get',
+                                success: function (data) {
+                                    $('.result').html(data);
+                                }
+                            })
+                        } else {
+                            $('.result').html("请填写正确的城市名称...");
+                        }
+                    })
+                })
+            </script>
+        </div>
+    </div>
+    <div class="footer">
+        ©2019-欢迎关注我的公众号：<a href="https://www.jianshu.com/u/d23fd5012bed">清风Python</a>
+    </div>
+</div>
+
+
+</body>
+</html>

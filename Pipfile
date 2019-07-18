@@ -1,0 +1,16 @@
+[[source]]
+name = "pypi"
+url = "https://mirrors.aliyun.com/pypi/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+python-dotenv = "*"
+flask = "*"
+requests = "*"
+beautifulsoup4 = "*"
+lxml = "*"
+
+[requires]
+python_version = "3.7"

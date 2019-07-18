@@ -1,0 +1,51 @@
+@media screen and (min-width: 1200px) {
+}
+
+/*中等PC屏幕下的专用样式*/
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+}
+
+/*PAD屏幕下的专用样式*/
+@media screen and (min-width: 768px) and (max-width: 991px ) {
+}
+
+/*PHONE屏幕下的专用样式*/
+@media screen and (max-width: 767px) {
+}
+
+body {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+h3,h4,h5{
+    text-align: center;
+}
+
+.container-small {
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.content {
+    border: 3px solid #A4A7AB;
+    border-radius: 5px;
+    height: 500px;
+}
+
+.header {
+    text-align: center;
+    font-size: 25px;
+    background-color: #3385FF;
+    color: #FAFCFF;
+    margin-bottom: 20px;
+}
+
+.block-info{
+    max-width: 90%;
+    margin: auto;
+}
+
+.footer {
+    text-align: center;
+}
